@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+{% block title %}
+    {{super()}}
+    Welcome to Flask Web Application
+{% endblock %}
+
+
+{% block content %} 
+<h1>Roberto Restrepo Builes</h1>
+<h4>Tu direccion ip es {{user_ip}}</h4>
+{% if user_ip %}
+    <h2>Hola; tu User Agent desde index es {{user_ip}}</h2>
+{% endif %}
+<ul>
+{% for item in items %}
+    {{macros.render_items(item)}}       
+    {% endfor %}
+</ul>
+{% endblock %}

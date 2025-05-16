@@ -1,0 +1,7 @@
+{%  if user_ip %}
+<h3>Hola, esta es tu direccion ip {{user_ip}}</h3>
+
+{%  else %}
+<a href="{{ url for('index')}}"></a>
+
+{% endif %}
